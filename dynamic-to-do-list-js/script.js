@@ -1,4 +1,4 @@
-// Wait for the DOM to load
+// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
 
     // Select DOM elements
@@ -15,25 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Create task list item
+        // Create list item
         const li = document.createElement('li');
         li.textContent = taskText;
 
         // Create remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = 'remove-btn';
+        removeBtn.className = "remove-btn";
 
         // Remove task on button click
         removeBtn.onclick = function() {
             taskList.removeChild(li);
         };
 
-        // Append remove button to task and task to list
+        // Append remove button to li and li to task list
         li.appendChild(removeBtn);
         taskList.appendChild(li);
 
-        // Clear input field
+        // Clear input
         taskInput.value = "";
     }
 
